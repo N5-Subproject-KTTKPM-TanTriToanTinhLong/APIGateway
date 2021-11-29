@@ -15,6 +15,9 @@ spring:
           uri: lb://FOOD-SERVICE
           predicates:
             - Path=/api/food/**
+logging:
+  level:
+    org.springframework.cloud.gateway: TRACE
 
 eureka:
   instance:
