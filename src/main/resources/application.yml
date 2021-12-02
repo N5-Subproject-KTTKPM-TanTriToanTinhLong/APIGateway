@@ -26,3 +26,12 @@ spring:
 logging:
   level:
     org.springframework.cloud.gateway: TRACE
+
+eureka:
+  instance:
+    hostname: n5-subprj-foody.herokuapp.com
+    homePageUrl: https://${eureka.instance.hostName}/
+    home-page-url-path: https://${eureka.instance.hostName}
+  client:
+    serviceUrl:
+      defaultZone: https://n5-subprj-eurekaserver.herokuapp.com/eureka
