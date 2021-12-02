@@ -11,10 +11,18 @@ spring:
           uri: lb://CUSTOMER-SERVICE
           predicates:
             - Path=/api/customer/**
+          filters:
+            - MyGatewayFilter
         - id: FOOD-SERVICE
           uri: lb://FOOD-SERVICE
           predicates:
             - Path=/api/food/**
+          filters:
+            - MyGatewayFilter
+        - id: JWTAUTHEN-SERVICE
+          uri: lb://JWTAUTHEN-SERVICE
+          predicates:
+            - Path=/auth/*
 logging:
   level:
     org.springframework.cloud.gateway: TRACE
