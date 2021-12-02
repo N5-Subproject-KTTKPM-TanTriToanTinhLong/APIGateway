@@ -22,7 +22,7 @@ spring:
         - id: JWTAUTHEN-SERVICE
           uri: lb://JWTAUTHEN-SERVICE
           predicates:
-            - Path=/auth/**
+            - Path=/auth/*
 logging:
   level:
     org.springframework.cloud.gateway: TRACE
